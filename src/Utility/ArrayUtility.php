@@ -7,7 +7,7 @@
  */
 
 namespace Cojecom\Utils\Utility;
-
+use Cojecom\Utils\Exception\MissingKeysException;
 
 class ArrayUtility
 {
@@ -16,13 +16,13 @@ class ArrayUtility
      * @param array $keys
      *
      * @return bool
-     * @throws \Cojecom\Utils\Utility\MissingKeysException
+     * @throws \Cojecom\Utils\Exception\MissingKeysException
      */
     public static function arrayHasKeys(array $array,array $keys){
         $missingKeys = [];
         
         foreach($keys as $key){
-            if(array_key_exists($key,$array))
+            if(!array_key_exists($key,$array))
                 $missingKeys[] = $key;
         }
         
