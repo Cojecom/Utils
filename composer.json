@@ -1,5 +1,6 @@
 {
     "name": "cojecom/utils",
+    "type": "library",
     "description": "A batch of small, general-purpose, usefull functions for PHP",
 	"license": "MIT",
     "require": {
